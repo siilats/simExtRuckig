@@ -10,8 +10,8 @@ DEFINES -= UNICODE
 DEFINES += QT_COMPIL
 CONFIG += shared plugin
 INCLUDEPATH += "ruckig/include"
-INCLUDEPATH += "../include"
-
+INCLUDEPATH += "/Applications/coppeliaSim.app/Contents/Resources/programming/include"
+CONFIG += c++17
 *-msvc* {
     DEFINES += _USE_MATH_DEFINES
     DEFINES += NOMINMAX
@@ -67,7 +67,7 @@ unix:!symbian {
 }
 
 HEADERS += \
-    ../include/simLib/simLib.h \
+    /Applications/coppeliaSim.app/Contents/Resources/programming/include/simLib/simLib.h \
     simExtRuckig.h \
     ruckig/include/ruckig/block.hpp \
     ruckig/include/ruckig/brake.hpp \
@@ -81,7 +81,7 @@ HEADERS += \
     ruckig/include/ruckig/velocity.hpp
 
 SOURCES += \
-    ../include/simLib/simLib.cpp \
+    /Applications/coppeliaSim.app/Contents/Resources/programming/include/simLib/simLib.cpp \
     simExtRuckig.cpp \
     ruckig/src/brake.cpp \
     ruckig/src/position-step1.cpp \
